@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OMP Gmail Drafts — privacy notice</title>
+<style>body{font:18px/1.6 system-ui,sans-serif;max-width:48rem;margin:3rem auto;padding:0 1.25rem;color:#202124;background:#fff}h1,h2{line-height:1.2}a{color:#174ea6}code{font-size:.9em}footer{margin-top:3rem;border-top:1px solid #ddd;padding-top:1rem}</style>
+</head>
+<body>
+<main>
+<p><a href="index.html">Application information</a></p>
+<h1>OMP Gmail Drafts privacy notice</h1>
+<p>Effective September 25, 2026. This notice describes a private desktop connector operated by the owner of this site, not a public email or mailbox-sharing service.</p>
+<h2>Information accessed and purpose</h2>
+<p>With separate Google OAuth authorization for each account, the connector can retrieve account identity, message headers, message content, snippets, attachment metadata, and conversation information. These data are used to answer the operator’s email requests and prepare unsent drafts. Large message-body parts may be retrieved through Gmail’s attachment endpoint. The connector does not automatically index or synchronize an entire mailbox.</p>
+<h2>Drafts and permissions</h2>
+<p>The application requests <code>gmail.readonly</code> and <code>gmail.compose</code>. Google’s compose scope permits sending and managing drafts; the connector restricts its available operations to reading and creating drafts, including threaded replies. It does not expose sending or deletion operations. Drafts are stored in the authorized Gmail mailbox and remain there for human review.</p>
+<h2>Local storage and access</h2>
+<p>OAuth credentials are stored on the operator’s computer in private, operating-system-user-owned files. Refresh tokens permit access across restarts until revoked or expired. They are protected by filesystem permissions, not a separate encryption scheme implemented by this connector. Software running as the same operating-system user may be able to access them. The connector does not intentionally store a separate mailbox-content database or send credentials to this website.</p>
+<h2>AI processing and conversation records</h2>
+<p>Messages retrieved into OMP can become part of a conversation sent to the AI provider configured by the operator. OMP may also retain those messages in local session history, artifacts, or logs according to its configuration. Provider processing, retention, and any training-related settings are governed by that provider’s terms and the operator’s selected settings; this notice does not promise zero retention. The operator should review those settings before retrieving sensitive messages. This connector itself has no advertising, resale, analytics, or model-training feature.</p>
+<h2>Control, retention, and removal</h2>
+<p>Each mailbox is authorized independently. Google Workspace administrators’ existing app-access policies still apply. The operator may revoke the application through Google Account third-party access settings and remove local account credentials. Removing credentials does not delete Gmail messages, saved drafts, existing OMP conversation records, or data already processed by an AI provider. Those must be managed separately using the relevant product’s controls. Uninstalling the connector does not revoke Google authorization automatically.</p>
+<h2>Public information website</h2>
+<p>These static pages contain no mailbox addresses, account list, messages, or credentials. They use no application analytics, cookies, forms, or third-party scripts. The hosting provider may process ordinary web-request information, such as IP addresses, under its own policies. See <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub’s privacy statement</a>.</p>
+<h2>Google API data use</h2>
+<p>OMP Gmail Drafts’ use and transfer of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including its Limited Use requirements. Use must be limited to the operator-requested email assistance described here; do not use retrieved Gmail data for advertising or generalized model training.</p>
+<h2>Questions</h2>
+<p>Contact the operator using <a href="https://github.com/denismailbegovic/omp-gmail-drafts-info/issues">this application’s issue tracker</a>. It is public: do not include private messages, account details, credentials, or tokens.</p>
+</main>
+</body>
+</html>
